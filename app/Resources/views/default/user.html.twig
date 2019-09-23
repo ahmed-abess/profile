@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header card-header-primary">
+                    <h4 class="card-title">Profile</h4>
+
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <label class="bmd-label-floating">First Name</label>
+                                    <h4 class= "card-title form-control">{{ user.first_name }}</h4>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="bmd-label-floating">Last Name</label>
+                                    <h4 class= "card-title form-control">{{ user.last_name }}</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="bmd-label-floating">Email address</label>
+                                    <h4 class= "card-title form-control">{{ user.email }}</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-profile">
+                <div class="card-avatar">
+                    <a href="#pablo">
+                        <img class="img" src="{{ user.avatar }}" />
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h6 class="card-category text-gray">CEO / Co-Founder</h6>
+                    <h4 class="card-title">{{ user.first_name }} {{  user.last_name }}</h4>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+{% endblock %}
